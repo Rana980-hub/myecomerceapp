@@ -10,6 +10,7 @@ export default function Store() {
     let [rating, setRating] = useState(0);
     let [price, setPrice] = useState(100);
     let [cartItems, setCartItems] = useState([]);
+    
 
     const getProducts = async () => {
         let data = await fetch('https://fakestoreapi.com/products');
@@ -69,27 +70,6 @@ export default function Store() {
             <div style={{ backgroundColor: "white", minHeight: "50vh" }}>
                 <h1 className="bg-success text-center" style={{ color: "Red", minHeight: "8vh" }}>Buy Different Type of Products</h1>
                 <div className="d-flex justify-content-center">
-                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                            <img src="/img/img1.jpg" alt="Product" className="d-block w-100 img-fluid" style={{ height: '40vh', objectFit: 'cover' }} />
-                            </div>
-                            <div className="carousel-item">
-                            <img src="/img/img2.jpg" alt="Product" className="d-block w-100 img-fluid" style={{ height: '40vh', objectFit: 'cover' }} />
-                            </div>
-                            <div className="carousel-item">
-                            <img src="/img/images.jpg" alt="Product" className="d-block w-100 img-fluid" style={{ height: '40vh', objectFit: 'cover' }} />
-                            </div>
-                        </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
-                    </div>
                 </div>
                 <hr />
                 <Bar />
