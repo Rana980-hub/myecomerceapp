@@ -169,7 +169,7 @@ export default function Store() {
                 </div>
             )}
             <footer className="bg-light text-center py-3 mt-4">
-                <p>Website developed by Rana Haris &copy; 2024</p>
+                <p>Website developed by Rana H &copy; 2024</p>
             </footer>
         </>
     );
