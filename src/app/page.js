@@ -10,7 +10,6 @@ export default function Store() {
     let [rating, setRating] = useState(0);
     let [price, setPrice] = useState(100);
     let [cartItems, setCartItems] = useState([]);
-    
 
     const getProducts = async () => {
         let data = await fetch('https://fakestoreapi.com/products');
@@ -46,31 +45,12 @@ export default function Store() {
                     <a className="navbar-brand" href="#">MyEcommerceProducts.com</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
-                                    <i className="bi bi-cart" style={{ fontSize: "1.5rem" }}></i> Cart ({cartItems.length})
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#" onClick={() => setShowCart(true)}>
-                                    Cart Products
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    </button>                    
                 </div>
             </nav>
 
             <div style={{ backgroundColor: "white", minHeight: "50vh" }}>
                 <h1 className="bg-success text-center" style={{ color: "Red", minHeight: "8vh" }}>Buy Different Type of Products</h1>
-                <div className="d-flex justify-content-center">
-                </div>
                 <hr />
                 <Bar />
                 <div className="container my-4">
@@ -169,7 +149,7 @@ export default function Store() {
                 </div>
             )}
             <footer className="bg-light text-center py-3 mt-4">
-                <p>Website developed by Rana H &copy; 2024</p>
+                <p>Website developed by Rana Haris &copy; 2024</p>
             </footer>
         </>
     );
