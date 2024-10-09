@@ -2,7 +2,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import Bar from './nav/Barr';
-
 export default function Store() {
     let [result, setResult] = useState([]);
     let [filteredProducts, setFilteredProducts] = useState([]);
@@ -37,7 +36,6 @@ export default function Store() {
     const clearCart = () => {
         setCartItems([]);
     };
-
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -48,7 +46,6 @@ export default function Store() {
                     </button>                    
                 </div>
             </nav>
-
             <div style={{ backgroundColor: "white", minHeight: "50vh" }}>
                 <h1 className="bg-success text-center" style={{ color: "Red", minHeight: "8vh" }}>Buy Different Type of Products</h1>
                 <hr />
@@ -101,30 +98,6 @@ export default function Store() {
                     </div>
                 </div>
             </div>
-            <div className="modal fade" id="cartModal" tabIndex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="cartModalLabel">Shopping Cart</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div className="modal-body">
-                            {cartItems.length === 0 ? (
-                                <p>Your cart is empty.</p>
-                            ) : (
-                                <ul className="list-group">
-                                    {cartItems.map((item, index) => (
-                                        <li className="list-group-item" key={index}>
-                                            {item.title} - ${item.price}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             {cartItems.length > 0 && (
                 <div className="container my-4">
                     <h2>Cart Products</h2>
